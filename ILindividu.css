@@ -28,14 +28,19 @@ body {
   font-size: 28px;
 }
 
+
 .nav-box {
+  display: flex;
+  flex-wrap: nowrap;          /* Keeps everything strictly on one horizontal line */
+  align-items: center;
+  justify-content: center;
   background-color: #064e0b;
   padding: 10px 25px;
+  gap: 20px;                  /* Space between buttons */
+  width: fit-content;         /* Shrinks the box to fit the contents */
+  margin: 0 auto;             /* Centers it nicely on the page */
   border-radius: 12px;
-  display: flex;
-  gap: 20px;
 }
-
 .nav-btn {
   color: white;
   text-decoration: none;
