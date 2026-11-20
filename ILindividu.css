@@ -1,0 +1,388 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, serif;
+}
+
+.banner {
+  background-image: url('headerbg.png');
+  background-size: cover;
+  background-position: center;
+  padding: 35px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.title-box {
+  background-color: #064e0b;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.title-box h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.nav-box {
+  background-color: #064e0b;
+  padding: 10px 25px;
+  border-radius: 12px;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-btn {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 18px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.nav-btn:hover {
+  background-color: #0e7a16;
+}
+
+
+
+
+
+
+/* Main container holding both boxes side-by-side */
+.main-container {
+  display: flex;
+  gap: 25px;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* Left Box: Vertical container full of pictures */
+.left-image-box {
+  flex: 0 0 280px; /* Fixed width for the picture column */
+  background-color: #064e0b; /* Matches your dark green theme */
+  padding: 15px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-height: 550px;
+  overflow-y: auto; /* Adds a scrollbar if you have lots of pictures */
+}
+
+/* Styling for individual pictures inside the left box */
+/* Left Box: Vertical container full of pictures */
+.left-image-box img {
+  width: 100%; /* Forces images to stretch and fill the entire width of the box */
+  height: 180px;
+  object-fit: cover; /* Crops the image nicely to fit the container */
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Right Box: Main content container */
+.right-content-box {
+  flex: 1; /* Takes up the remaining space */
+  background-color: #fce4ec; /* Light pink background matching your project style */
+  padding: 30px;
+  border-radius: 12px;
+  position: relative; /* Allows absolute positioning for the inner corner box */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Inner Box placed at the corner */
+.inner-subtitle-box {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  background-color: #00897b; /* Teal accent color */
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  
+  /* Smooth transition for the hover effect */
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* Subtitle text styling */
+.inner-subtitle-box h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+/* Hover Effect: Enlarges and glows */
+.inner-subtitle-box:hover {
+  transform: scale(1.05); /* Slightly enlarges the box */
+  box-shadow: 0 0 20px rgba(0, 137, 123, 0.8), 0 0 35px rgba(255, 255, 255, 0.6); /* Glowing effect */
+}
+
+/* Pushes the text down so it doesn't overlap with the absolute positioned inner box */
+.right-content-box p {
+  margin-top: 70px;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.left-text-box {
+  flex: 0 0 500px; /* Fixed width for the picture column */
+  background-color: #80d3fd; /* Matches your dark green theme */
+  padding: 15px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-height: 890px;
+  /* Replace .left-box with whatever class/tag name you used for the blue section */
+  overflow: visible;      /* Completely removes the scrollbar */
+}
+
+
+
+
+
+
+.inner-subtitle2-box {
+  top: 25px;
+  left: 25px;
+  width: fit-content;
+  background-color: #dd4545; /* Teal accent color */
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  
+  /* Smooth transition for the hover effect */
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* Subtitle text styling */
+.inner-subtitle2-box h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+/* Hover Effect: Enlarges and glows */
+.inner-subtitle2-box:hover {
+  transform: scale(1.05); /* Slightly enlarges the box */
+  box-shadow: 0 0 20px rgba(235, 239, 238, 0.8), 0 0 35px rgba(255, 255, 255, 0.6); /* Glowing effect */
+}
+
+footer {
+  background-color: #ff69b4; /* Bright pink (change to #ffc0cb for pastel pink) */
+  color: #ffffff;
+  text-align: center;
+  padding: 15px 0;
+  font-family: sans-serif;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+}
+
+
+
+
+/* The outer container holding all 3 boxes */
+/* The outer container holding the stacked boxes */
+.three-boxes-container {
+  display: flex;
+  flex-direction: column;     /* Stacks the boxes vertically */
+  gap: 20px;                  /* Space between each stacked box */
+  width: 100%;                /* Takes up the full width available */
+  max-width: 1400px;          /* Optional: keeps it from stretching too far on giant monitors */
+  margin: 20px auto;          /* Centers the container on the page */
+  padding: 0 20px;            /* Adds a small buffer so boxes don't touch screen edges */
+  box-sizing: border-box;     /* Includes padding in the total width calculation */
+}
+
+/* Styling for each individual box */
+.box {
+  position: relative;        /* Keeps absolute children trapped inside */
+  padding: 30px;              /* Ensure there is enough inner padding */
+  background-color: #fde8ef;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.inner-subtitle-box {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #333333;
+  padding: 10px 22px;
+  margin-bottom: 15px;       /* Pushes the paragraph text down below it */
+  border-radius: 12px;
+  border: 2px solid #ff7eb3;
+  box-shadow: 0 4px 10px rgba(255, 126, 179, 0.2);
+  
+  /* Remove any negative margins or absolute positioning if you added them */
+  position: static;          
+}
+
+.inner-subtitle-box h2 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+/* Hover state: makes it grow bigger and glow */
+.inner-subtitle-box:hover {
+  transform: scale(1.06);            /* Makes the box 6% bigger */
+  background-color: #fff5f9;         /* Slight warm tint on hover */
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.8), 
+              0 0 35px rgba(255, 105, 180, 0.4); /* Double-layered pink glow */
+}
+
+
+/* Creates a responsive grid that fits multiple items per row */
+.sdg-grid {
+  display: grid;
+  /* Changes from 2 columns to 3 columns, sharing the full width equally */
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px; /* Space between the three boxes */
+  margin-top: 20px;
+}
+
+/* Styling for each individual SDG image box */
+.sdg-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 2px solid #ff7eb3;
+  padding: 8px;
+  aspect-ratio: 1 / 1; /* Keeps the boxes perfectly square */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(255, 126, 179, 0.2);
+  cursor: pointer;
+  
+  /* Smooth hover transition */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Makes sure the image fits nicely inside the card */
+.sdg-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Hover effect: grows bigger and glows */
+.sdg-card:hover {
+  transform: scale(1.08);
+  background-color: #fff5f9;
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.8), 
+              0 0 25px rgba(255, 105, 180, 0.4);
+}
+
+
+
+
+/* Container to hold the images and keep them neatly sized */
+.image-hover-container {
+  position: relative;
+  width: 100%;             /* Adjust width as needed (e.g., 300px or 100%) */
+  max-width: 350px;        /* Limits max size */
+  aspect-ratio: 4 / 3;     /* Keeps a nice photo shape */
+  border-radius: 12px;     /* Rounded corners matching your theme */
+  overflow: hidden;        /* Hides anything spilling outside the box */
+  margin: 20px 0;          /* Spacing around the image */
+  border: 2px solid #ff7eb3; /* Optional pink border matching your style */
+  box-shadow: 0 4px 10px rgba(255, 126, 179, 0.2);
+  cursor: pointer;
+}
+
+/* Base styles for both images */
+.image-hover-container {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  overflow: hidden;
+  
+  /* Change this line to center it horizontally */
+  margin: 20px auto;       
+  
+  border: 2px solid #ff7eb3;
+  box-shadow: 0 4px 10px rgba(255, 126, 179, 0.2);
+  cursor: pointer;
+}
+
+/* Default image is fully visible */
+.img-default {
+  opacity: 1;
+  z-index: 2;
+}
+
+/* Hover image is hidden initially */
+.img-hover {
+  opacity: 0;
+  z-index: 1;
+}
+
+/* When hovering over the container: */
+.image-hover-container:hover .img-default {
+  opacity: 0;              /* Fades out the first image */
+  transform: scale(1.05);  /* Slight zoom effect */
+}
+
+.image-hover-container:hover .img-hover {
+  opacity: 1;              /* Fades in the second image */
+  transform: scale(1.05);  /* Slight zoom effect */
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Keeps "Beranda" aligned with your other nav-btn links */
+.dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Hidden dropdown box */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%; /* Sits directly underneath the Beranda button */
+  left: 0;
+  background-color: #14532d; /* Dark green matching your navbar */
+  min-width: 150px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* Dropdown links */
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-size: 15px;
+}
+
+.dropdown-content a:hover {
+  background-color: #22c55e;
+}
+
+/* Show on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
