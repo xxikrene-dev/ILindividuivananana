@@ -357,15 +357,20 @@ html {
 /* Hidden dropdown box */
 .dropdown-content {
   display: none;
-  position: absolute;
-  top: 100%; /* Sits directly underneath the Beranda button */
+  position: absolute; /* This keeps it floating so it doesn't push other buttons */
+  top: 100%;          /* Places it directly below the nav bar */
   left: 0;
-  background-color: #14532d; /* Dark green matching your navbar */
-  min-width: 150px;
-  border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
-  z-index: 9999;
+  background-color: #1b4d3e; /* Your dark green theme */
+  min-width: 180px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
+  z-index: 9999;      /* Forces it to stay on top of other elements */
+  border-radius: 8px;
   overflow: hidden;
+}
+
+/* Ensure the dropdown shows on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 /* Dropdown links */
